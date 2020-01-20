@@ -1,0 +1,6 @@
+<% data = observation.data %>
+
+<%= tag.div style: "border: 1px solid; padding: 10px;" do %>
+  <%= tag.label data.analysis.coding.display %>
+  <%= tag.input value: data.result.first.valueQuantity.value %>
+<% end %>

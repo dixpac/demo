@@ -1,0 +1,35 @@
+// Represent basic current JSON layout. Just for better undersanding.
+{
+  "analysis": {
+    "coding": {
+      "system": "http://loinc.org",
+      "code": "code2",
+      "display": "Brzina sedimentacije eritrocita (SE)"
+    }
+  },
+  "result": [
+    {
+      "status": "new",
+      "valueQuantity": {
+        //"value": 6.3,
+        "unit": "mmol/l",
+        "system": "http://unitsofmeasure.org",
+        "code": "mmol/L"
+      },
+      "referenceRange": {
+        "low": {
+          "value": 2,
+          "unit": "mmol/l",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        },
+        "high": {
+          "value": 13,
+          "unit": "mmol/l",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        }
+      }
+    }
+  ]
+}
