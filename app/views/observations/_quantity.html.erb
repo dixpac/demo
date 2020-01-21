@@ -1,6 +1,8 @@
 <% data = observation.data %>
 
-<%= tag.div style: "border: 1px solid; padding: 10px;" do %>
+<%= tag.div style: "border: 1px solid; padding: 10px;",
+  data: { target: "master.observation", controller: "quantity", 'quantity-payload-value' => data.result.first.valueQuantity.to_json } do %>
+
   <%= tag.label data.analysis.coding.display %>
-  <%= tag.input value: data.result.first.valueQuantity.value %>
+  <%= tag.input value: data.result.first.valueQuantity.value, data: { 'quantity-target' => "value", action: "quantity#changed" } %>
 <% end %>
