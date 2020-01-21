@@ -1,5 +1,5 @@
 class ObservationsController < ApplicationController
-  before_action :set_observation, only: [:show, :edit, :update, :destroy]
+  before_action :set_observation, only: [:show, :edit, :destroy]
 
   # GET /observations
   # GET /observations.json
@@ -41,6 +41,7 @@ class ObservationsController < ApplicationController
   # PATCH/PUT /observations/1
   # PATCH/PUT /observations/1.json
   def update
+    byebug
     respond_to do |format|
       if @observation.update(observation_params)
         format.html { redirect_to @observation, notice: 'Observation was successfully updated.' }

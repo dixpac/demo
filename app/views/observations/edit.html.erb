@@ -1,6 +1,11 @@
 <h1>Editing Observation</h1>
 
-<% @observations.each do |observation| %>
-  <%= render "quantity", observation: observation %>
+<%= tag.div id: "observations-form", data: { observations: @observations.to_json } do %>
+  <section v-for="observation in observations" v-bind:key="observation.id">
+    <span>{{observation.data.analysis.coding.display}}<span>
+    <input v-model="observation.data.result[0].valueQuantity.value">
+  </section>
+
+  <button v-on:click="submit">Save</button>
 <% end %>
 
