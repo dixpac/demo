@@ -2,7 +2,7 @@
 
 <%= tag.div data: { controller: "master" } do %>
   <% @observations.each do |observation| %>
-    <%= render "quantity", observation: observation %>
+    <%= render "#{observation.data.type}", observation: observation %>
   <% end %>
 
   <button data-action="master#submit">Save</button>

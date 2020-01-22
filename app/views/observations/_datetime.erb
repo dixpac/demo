@@ -1,0 +1,11 @@
+<% data = observation.data %>
+
+<%= tag.div style: "border: 1px solid; padding: 10px;",
+  data: {
+    target: "master.observation",
+    controller: "datetime",
+    'datetime-payload-value' => data.result.first.valueDateTime.to_json } do %>
+
+  <%= tag.label data.analysis.coding.display %>
+  <%= select_datetime data.result.first.valueDateTime, data: { 'datetime-target' => "value", action: "datetime#changed" } %>
+<% end %>

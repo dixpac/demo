@@ -8,6 +8,7 @@ class Observation::Result
   attribute :status, :string
   attribute :valueQuantity, Type::Quantity.to_type
   attribute :valueString, :string
+  attribute :valueDateTime, :datetime
   attribute :referenceRange, Observation::ReferenceRange.to_type
   attribute :interpretation, Type::CoedableConcept.to_type
   attribute :issued, :datetime, default: Time.zone.now
