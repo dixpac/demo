@@ -1,0 +1,9 @@
+<%= tag.div style: "border: 1px solid; padding: 10px;",
+  data: {
+    'master-target' => "observation",
+    controller: "quantity",
+    payload: valueQuantity.to_json} do %>
+
+  <%= tag.label analysis_name %>
+  <%= tag.input value: value, data: { 'quantity-target' => "value", action: "quantity#changed" } %>
+<% end %>

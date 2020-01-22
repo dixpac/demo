@@ -1,0 +1,10 @@
+<%= tag.div style: "border: 1px solid; padding: 10px;", data: {
+    "master-target" => "observation",
+    controller: "select",
+    payload: codes.to_json } do %>
+
+  <%= tag.label analysis_name %>
+  <%= select_tag "", options_for_select(Result.all.map { |s| [s.name, s.code] }, value), multiple: true,
+    data: { 'select-target' => "chooser" },
+    style: "width: 100%" %>
+<% end %>

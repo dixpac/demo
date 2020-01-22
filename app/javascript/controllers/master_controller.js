@@ -6,7 +6,7 @@ export default class extends Controller {
   submit() {
     let payload = []
     this.observationTargets.forEach((el, i) => {
-      const data = JSON.parse(el.getAttribute("data-quantity-payload-value"))
+      const data = JSON.parse(el.getAttribute("data-payload"))
       payload.push(data)
     })
 

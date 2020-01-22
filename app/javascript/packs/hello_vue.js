@@ -16,6 +16,7 @@ Vue.use(VueResource)
 
 document.addEventListener('turbolinks:load', () => {
   Vue.http.headers.common['X-CSRF-Token'] = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+
   var element = document.getElementById("observations-form")
 
   if (element != null) {

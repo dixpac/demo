@@ -2,7 +2,7 @@
 
 <%= tag.div data: { controller: "master" } do %>
   <% @observations.each do |observation| %>
-    <%= render "#{observation.data.type}", observation: observation %>
+    <%= render("#{observation.data.type.camelize}Component".constantize, payload: observation.data) %>
   <% end %>
 
   <button data-action="master#submit">Save</button>

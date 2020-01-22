@@ -1,0 +1,9 @@
+<%= tag.div style: "border: 1px solid; padding: 10px;",
+  data: {
+    "master-target" => "observation",
+    controller: "datetime",
+    payload: payload.to_json } do %>
+
+  <%= tag.label analysis_name %>
+  <%= select_datetime value, data: { 'datetime-target' => "value", action: "datetime#changed" } %>
+<% end %>
